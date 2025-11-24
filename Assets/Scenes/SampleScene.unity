@@ -893,6 +893,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &365712574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365712575}
+  m_Layer: 0
+  m_Name: EffectBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365712575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365712574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.95, y: 0, z: 10.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2094918486}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382808823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,7 +2657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &874484203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,6 +5197,59 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 3150474306388093854, guid: c21bbd63383cc7e4daa10d8ff39c577c,
     type: 3}
+--- !u!1 &2013578193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013578195}
+  - component: {fileID: 2013578194}
+  m_Layer: 0
+  m_Name: EffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2013578194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013578193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bf976eaebe1fd4d92669750c7c2c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectList:
+  - effectName: "\uCC29\uC9C0\uC774\uD399\uD2B8"
+    effectPrefabs: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+      type: 3}
+    defaultDuration: 1
+  - effectName: "\uACF5\uACA9\uC774\uD399\uD2B8"
+    effectPrefabs: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7,
+      type: 3}
+    defaultDuration: 1
+--- !u!4 &2013578195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013578193}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7895627, y: 19.126127, z: -2.819844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2092841492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,6 +5363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 943486872}
+  - {fileID: 365712575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &2094918487
@@ -5328,6 +5413,7 @@ MonoBehaviour:
   attackDuration: 0.8
   canMoveWhileAttacking: 0
   animator: {fileID: 943486873}
+  effectPos: {fileID: 365712574}
 --- !u!114 &2094918489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5574,3 +5660,4 @@ SceneRoots:
   - {fileID: 632206948}
   - {fileID: 874484208}
   - {fileID: 363493507}
+  - {fileID: 2013578195}
